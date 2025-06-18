@@ -1,0 +1,12 @@
+world=../Worlds/MyWorld.wld
+autocreate=1
+worldname=Carter's Playground
+difficulty=0
+maxplayers=8
+port=7777
+password=1111
+motd=Welcome to My Terraria Server!
+worldpath=../Worlds
+banlist=banlist.txt
+secure=1
+language=en/US
