@@ -12,11 +12,9 @@ echo "Server output will be displayed directly in this console."
 echo "Press Ctrl+C to stop the server."
 echo "----------------------------------------"
 
-# Stay in root directory and use relative paths
-cd "$SERVER_DIR"
+# Change to server directory for proper path resolution
+cd "$SERVER_DIR/server"
 
 # Run the server directly with output to console
-./server/TerrariaServer.bin.x86_64 \
-    -config config/serverconfig.txt \
-    -worldpath Worlds \
-    -world Worlds/MyWorld.wld
+./TerrariaServer.bin.x86_64 \
+    -config ../config/serverconfig.txt

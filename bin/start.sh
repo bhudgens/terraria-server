@@ -8,13 +8,11 @@ if [ ! -d "$SERVER_DIR/Worlds" ]; then
 fi
 
 echo "Starting Terraria server..."
-cd "$SERVER_DIR"
+cd "$SERVER_DIR/server"
 
-# Start server in screen session with proper paths
-screen -dmS terraria ./server/TerrariaServer.bin.x86_64 \
-    -config config/serverconfig.txt \
-    -worldpath Worlds \
-    -world Worlds/MyWorld.wld
+# Start server in screen session using config file
+screen -dmS terraria ./TerrariaServer.bin.x86_64 \
+    -config ../config/serverconfig.txt
 
 echo "Server started in screen session 'terraria'"
 echo "To attach to the console, use: screen -r terraria"
@@ -27,7 +25,7 @@ if screen -list | grep -q "terraria"; then
     echo "Server started successfully!"
     echo "Running connectivity tests..."
     sleep 2  # Additional delay before running tests
-    ./bin/test_connectivity.sh
+    ../bin/test_connectivity.sh
 else
     echo "Server failed to start. Check logs for details."
     exit 1
