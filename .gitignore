@@ -1,0 +1,31 @@
+# Server binaries and libraries
+server/
+lib/
+*.dll
+*.exe
+*.so*
+*.dylib
+*.bin*
+*.config
+
+# World files and backups
+Worlds/
+*.wld
+*.wld.bak
+
+# Steam files
+steamapps/
+*.acf
+*.vdf
+
+# Runtime files
+*.log
+banlist.txt
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+/tmp/
+*.tmp
